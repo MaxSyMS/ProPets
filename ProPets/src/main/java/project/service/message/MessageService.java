@@ -7,5 +7,11 @@ import project.dto.message.PostDto;
 public interface MessageService {
 	
 	PostDto createPost(NewPostDto newPostDto, String ownerId);
+
+	PostDto updatePost(NewPostDto newPostDto, String ownerId);
+
+	PostDto deletePost(String ownerId);
+
+	PostDto getPostById(String id);
 	
 }

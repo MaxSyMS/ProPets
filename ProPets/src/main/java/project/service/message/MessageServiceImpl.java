@@ -19,4 +19,22 @@ public class MessageServiceImpl implements MessageService {
 		return null;
 	}
 
+	@Override
+	public PostDto updatePost(NewPostDto newPostDto, String ownerId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PostDto deletePost(String ownerId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PostDto getPostById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
