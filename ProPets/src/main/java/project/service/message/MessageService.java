@@ -8,9 +8,9 @@ public interface MessageService {
 	
 	PostDto createPost(NewPostDto newPostDto, String ownerId);
 
-	PostDto updatePost(NewPostDto newPostDto, String ownerId);
+	PostDto updatePost(NewPostDto newPostDto, String id);
 
-	PostDto deletePost(String ownerId);
+	PostDto deletePost(String id);
 
 	PostDto getPostById(String id);
 

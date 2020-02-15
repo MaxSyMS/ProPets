@@ -29,14 +29,14 @@ public class MessageController {
 		return messageService.createPost(newPostDto, ownerId);
 	}
 
-	@PutMapping("/{ownerId}")
-	public PostDto updatePost(@RequestBody NewPostDto newPostDto, @PathVariable String ownerId) {
-		return messageService.updatePost(newPostDto, ownerId);
+	@PutMapping("/{id}")
+	public PostDto updatePost(@RequestBody NewPostDto newPostDto, @PathVariable String id) {
+		return messageService.updatePost(newPostDto, id);
 	}
 
-	@DeleteMapping("/{ownerId}")
-	public PostDto deletePost(@PathVariable String ownerId) {
-		return messageService.deletePost(ownerId);
+	@DeleteMapping("/{id}")
+	public PostDto deletePost(@PathVariable String id) {
+		return messageService.deletePost(id);
 	}
 
 	@GetMapping("/{id}")

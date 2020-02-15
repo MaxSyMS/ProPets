@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 //M
 public class PostDto {
 	@Id
-	int id;
+	String id;
 	String ownerId;
 	LocalDateTime postDate;
 	String text;
