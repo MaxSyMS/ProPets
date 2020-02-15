@@ -37,4 +37,22 @@ public class MessageServiceImpl implements MessageService {
 		return null;
 	}
 
+	@Override
+	public Iterable<PostDto> viewPosts(int items_on_page, int current_page) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void complainOnPost(String id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void hidePost(String id) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
