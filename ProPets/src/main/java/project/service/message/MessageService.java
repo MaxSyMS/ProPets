@@ -13,5 +13,11 @@ public interface MessageService {
 	PostDto deletePost(String ownerId);
 
 	PostDto getPostById(String id);
+
+	Iterable<PostDto> viewPosts(int items_on_page, int current_page);
+
+	void complainOnPost(String id);
+
+	void hidePost(String id);
 	
 }

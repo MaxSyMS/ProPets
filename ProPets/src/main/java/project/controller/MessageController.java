@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import project.dto.message.NewPostDto;
@@ -19,7 +20,7 @@ import project.service.message.MessageService;
 @RequestMapping("/{lang}/message/v1")
 //M
 public class MessageController {
-	
+
 	@Autowired
 	MessageService messageService;
 
@@ -27,37 +28,36 @@ public class MessageController {
 	public PostDto createPost(@RequestBody NewPostDto newPostDto, @PathVariable String ownerId) {
 		return messageService.createPost(newPostDto, ownerId);
 	}
-	
+
 	@PutMapping("/{ownerId}")
 	public PostDto updatePost(@RequestBody NewPostDto newPostDto, @PathVariable String ownerId) {
 		return messageService.updatePost(newPostDto, ownerId);
 	}
-	
+
 	@DeleteMapping("/{ownerId}")
 	public PostDto deletePost(@PathVariable String ownerId) {
 		return messageService.deletePost(ownerId);
 	}
-	
+
 	@GetMapping("/{id}")
 	public PostDto getPostById(@PathVariable String id) {
 		return messageService.getPostById(id);
 	}
+
+	@GetMapping("/view")
+	public Iterable<PostDto> viewPosts(@RequestParam int items_on_page, @RequestParam int current_page) {
+		return messageService.viewPosts(items_on_page, current_page);
+	}
 	
+	@PutMapping("/complain")
+	public void complainOnPost(@PathVariable String id) {
+		messageService.complainOnPost(id);
+	}
 	
+	@PutMapping("/hide")
+	public void hidePost(@PathVariable String id) {
+		messageService.hidePost(id);
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }
