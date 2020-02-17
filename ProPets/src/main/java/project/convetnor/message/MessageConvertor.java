@@ -1,9 +1,13 @@
 package project.convetnor.message;
 
+import java.util.List;
+
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
 import project.domain.message.Post;
 import project.dto.message.PostDto;
+import project.dto.message.ViewPostDto;
 
 @Component
 //M
@@ -16,6 +20,15 @@ public class MessageConvertor {
 				.postDate(post.getPostDate())
 				.text(post.getText())
 				.images(post.getImages())
+				.build();
+	}
+
+	public ViewPostDto convertToViewPostDto(List<PostDto> list, Pageable paging) {
+		return ViewPostDto.builder()
+				.posts(list)
+				.currentPage(paging.getPageNumber())
+				.itemsOnPage(paging.getPageSize())
+				.itemsTotal(list.size())
 				.build();
 	}
 

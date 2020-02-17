@@ -3,6 +3,7 @@ package project.service.message;
 
 import project.dto.message.NewPostDto;
 import project.dto.message.PostDto;
+import project.dto.message.ViewPostDto;
 //M
 public interface MessageService {
 	
@@ -14,7 +15,7 @@ public interface MessageService {
 
 	PostDto getPostById(String id);
 
-	Iterable<PostDto> viewPosts(int items_on_page, int current_page);
+	ViewPostDto viewPosts(int items_on_page, int current_page);
 
 	void complainOnPost(String id);
 

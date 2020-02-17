@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import project.dto.message.NewPostDto;
 import project.dto.message.PostDto;
+import project.dto.message.ViewPostDto;
 //M
 import project.service.message.MessageService;
 
@@ -45,8 +46,8 @@ public class MessageController {
 	}
 
 	@GetMapping("/view")
-	public Iterable<PostDto> viewPosts(@RequestParam int items_on_page, @RequestParam int current_page) {
-		return messageService.viewPosts(items_on_page, current_page);
+	public ViewPostDto viewPosts(@RequestParam int itemsOnPage, @RequestParam int currentPage) {
+		return messageService.viewPosts(itemsOnPage, currentPage);
 	}
 	
 	@PutMapping("/complain")
