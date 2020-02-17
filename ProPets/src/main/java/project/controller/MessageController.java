@@ -45,19 +45,19 @@ public class MessageController {
 		return messageService.getPostById(id);
 	}
 
-	@GetMapping("/view")
-	public ViewPostDto viewPosts(@RequestParam int itemsOnPage, @RequestParam int currentPage) {
-		return messageService.viewPosts(itemsOnPage, currentPage);
+	@GetMapping("/view/{user}")
+	public ViewPostDto viewPosts(@PathVariable String user, @RequestParam int itemsOnPage, @RequestParam int currentPage) {
+		return messageService.viewPosts(itemsOnPage, currentPage, user);
 	}
 	
-	@PutMapping("/complain")
+	@PutMapping("/complain/{id}")
 	public void complainOnPost(@PathVariable String id) {
 		messageService.complainOnPost(id);
 	}
 	
-	@PutMapping("/hide")
-	public void hidePost(@PathVariable String id) {
-		messageService.hidePost(id);
+	@PutMapping("/hide/{id}/{user}")
+	public void hidePost(@PathVariable String id, @PathVariable String user) {
+		messageService.hidePost(id, user);
 	}
 	
 

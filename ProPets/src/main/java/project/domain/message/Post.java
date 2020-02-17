@@ -36,7 +36,9 @@ public class Post {
 	public boolean addImages(String image) {
 		return images.add(image);
 	}
-	
+	public boolean addToBlackList(String user) {
+		return blackList.add(user);
+	}
 	
 	
 }

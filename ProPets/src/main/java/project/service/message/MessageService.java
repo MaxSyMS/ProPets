@@ -15,10 +15,10 @@ public interface MessageService {
 
 	PostDto getPostById(String id);
 
-	ViewPostDto viewPosts(int items_on_page, int current_page);
+	ViewPostDto viewPosts(int items_on_page, int current_page, String user);
 
 	void complainOnPost(String id);
 
-	void hidePost(String id);
+	void hidePost(String id, String user);
 	
 }
