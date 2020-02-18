@@ -20,5 +20,5 @@ public interface MessageService {
 	void complainOnPost(String id);
 
 	void hidePost(String id, String user);
-asda
+
 }
