@@ -1,4 +1,4 @@
-package project.dao;
+package project.dao.message;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 

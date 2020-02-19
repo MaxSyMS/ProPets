@@ -14,7 +14,7 @@ import org.springframework.data.domain.Slice;
 import org.springframework.stereotype.Service;
 
 import project.convetnor.message.MessageConvertor;
-import project.dao.MessageRepository;
+import project.dao.message.MessageRepository;
 import project.domain.message.Post;
 import project.dto.message.NewPostDto;
 import project.dto.message.PostDto;
