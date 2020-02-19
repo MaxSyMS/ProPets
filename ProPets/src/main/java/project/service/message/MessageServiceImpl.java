@@ -102,7 +102,7 @@ public class MessageServiceImpl implements MessageService {
 	@Override
 	public void complainOnPost(String id) {
 		Post post = messageRepository.findById(id).orElseThrow(PostNotFoundException::new);
-		post.isComplpain();
+		post.setComplpain(true);
 		messageRepository.save(post);
 		sendComplainedPostToAdministrator(post);
 

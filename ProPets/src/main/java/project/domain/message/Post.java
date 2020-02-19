@@ -30,6 +30,7 @@ public class Post {
 	String text;
 	Set<String> images;
 	Set<String> blackList;
+	@Setter
 	boolean complpain;
 
 	
