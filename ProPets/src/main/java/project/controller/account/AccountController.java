@@ -10,8 +10,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import project.dao.account.AccountRepository;
+import project.dto.account.BlockUserDto;
+import project.dto.account.EditUserDto;
+import project.dto.account.NewUserDto;
+import project.dto.account.RegisterUserDto;
+import project.dto.account.RolesDto;
+import project.dto.account.UserDto;
 import project.dto.message.PostDto;
+import project.service.account.AccountService;
 
 @RestController
 @RequestMapping("/{lang}/account/v1")
