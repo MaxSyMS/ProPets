@@ -1,5 +1,7 @@
 package project.service.account;
 
+import org.springframework.stereotype.Service;
+
 import project.dto.account.BlockUserDto;
 import project.dto.account.EditUserDto;
 import project.dto.account.NewUserDto;
@@ -8,6 +10,7 @@ import project.dto.account.RolesDto;
 import project.dto.account.UserDto;
 import project.dto.message.PostDto;
 
+@Service
 public class AccountServiceImpl implements AccountService {
 
 	@Override
