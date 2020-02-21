@@ -13,7 +13,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
 import org.springframework.stereotype.Service;
 
-import project.convetnor.message.MessageConvertor;
+import project.convertor.message.MessageConvertor;
 import project.dao.message.MessageRepository;
 import project.domain.message.Post;
 import project.dto.message.NewPostDto;

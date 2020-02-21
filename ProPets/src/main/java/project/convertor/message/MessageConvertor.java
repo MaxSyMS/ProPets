@@ -1,4 +1,4 @@
-package project.convetnor.message;
+package project.convertor.message;
 
 import java.util.List;
 
