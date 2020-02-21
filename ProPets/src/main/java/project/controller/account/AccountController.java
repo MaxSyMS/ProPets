@@ -1,5 +1,7 @@
 package project.controller.account;
 
+import java.util.Set;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +16,6 @@ import project.dto.account.BlockUserDto;
 import project.dto.account.EditUserDto;
 import project.dto.account.NewUserDto;
 import project.dto.account.RegisterUserDto;
-import project.dto.account.RolesDto;
 import project.dto.account.UserDto;
 import project.dto.message.PostDto;
 import project.service.account.AccountService;
@@ -53,9 +54,9 @@ public class AccountController {
 	
 	@PutMapping("/{login}/roles")
 	//Nado vozvraschat' UserDto
-	public RolesDto addUserRoles(@PathVariable String login, @RequestBody RolesDto roles, String token) {
+	public Set<String> addUserRoles(@PathVariable String login, @RequestBody String role, String token) {
 		//access permitted only to admin
-		return accountService.addRoles(login, roles, token);
+		return accountService.addRoles(login, role, token);
 	}
 	
 	@PutMapping("/{login}/block/{status}")

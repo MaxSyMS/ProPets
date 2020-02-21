@@ -1,10 +1,11 @@
 package project.service.account;
 
+import java.util.Set;
+
 import project.dto.account.BlockUserDto;
 import project.dto.account.EditUserDto;
 import project.dto.account.NewUserDto;
 import project.dto.account.RegisterUserDto;
-import project.dto.account.RolesDto;
 import project.dto.account.UserDto;
 import project.dto.message.PostDto;
 
@@ -20,7 +21,7 @@ public interface AccountService {
 
 	UserDto removeUser(String login, String token);
 
-	RolesDto addRoles(String login, RolesDto roles, String token);
+	Set<String> addRoles(String login, String role, String token);
 
 	BlockUserDto blockUserAccount(String login, BlockUserDto blockUser, String token, boolean status);
 
