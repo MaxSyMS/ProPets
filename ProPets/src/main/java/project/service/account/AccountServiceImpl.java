@@ -107,6 +107,7 @@ public class AccountServiceImpl implements AccountService {
 		user.addRole(role);
 		accountRepository.save(user);
 		return user.getRoles();
+		//1
 	}
 
 	@Override
